@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>AluraBooks</title>
 </head>
+
 <body>
-    <header class="cabecalho"> 
+    <header class="cabecalho">
         <div class="container">
             <input type="checkbox" name="" id="menu" class="container__botao">
             <label for="menu">
@@ -22,7 +26,7 @@
                 <li class="lista-menu__item"><a href="" class="lista-menu__link">Business</a></li>
                 <li class="lista-menu__item"><a href="" class="lista-menu__link">Design e UX</a></li>
             </ul>
-            <img src="./img/Logo.svg" alt="Logo da Alurabooks"  class="container__imagem">
+            <img src="./img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
 
         </div>
         <div class="container">
@@ -31,5 +35,49 @@
             <a href="#"><img src="./img/Usuario.svg" alt="perfil" class="container__imagem"></a>
         </div>
     </header>
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre em nossa estante o que precisa para o seu desenvolvimento!</p>
+        <input type="search" name="" id="" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+    </section>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <!-- If we need pagination -->
+            <div class="swiper-pagination" id="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./img/ApacheKafka.svg" alt="Livro sobre ApacheKafka e Spring Boot">
+                </div>
+                <div class="swiper-slide"><img src="./img/Liderança.svg" alt="Livro sobre kliderança em design"></div>
+                <div class="swiper-slide"><img src="./img/Javascript.svg" alt="Livro sobre Javascript assertivo"></div>
+                <div class="swiper-slide"><img src="./img/Guia Front-end.svg" alt="Livro guia de Front-End"></div>
+                <div class="swiper-slide"><img src="./img/Portugol.svg" alt="Livro sobre Portugol"></div>
+                <div class="swiper-slide"><img src="./img/Acessibilidade.svg" alt="Livro sobre Acessibilidade web">
+                </div>
+
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            }
+        });
+    </script>
 </body>
+
 </html>
