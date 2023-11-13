@@ -25,11 +25,24 @@
 }
 
 .banner__pesquisa::placeholder {
-    font-family: var(--fonte);
+    font-family: var(--fonte-principal
+);
     font-size: 14px;
     font-weight: 400;
     text-align: center;
     color: var(--branco);
     background: url("../img/Lupa.svg") no-repeat;
     background-position: 0.5em;
+}
+
+@media (min-width:1024px) {
+    .banner__titulo {
+        font-size: 36px;
+    }
+    .banner__pesquisa {
+        width: 50%;
+    }
+    .banner__pesquisa::placeholder {
+        background-position: 6em;
+    }
 }
