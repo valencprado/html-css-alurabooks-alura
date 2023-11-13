@@ -12,12 +12,14 @@
     --laranja: #eb9b00;
     --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
     --azul: #002f52;
-    --fonte: 'Poppins', sans-serif;
+    --preto: #000;
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Josefin Sans', sans-serif;
 }
 
 body {
     background-color: var(--cor-fundo);
-    font-family: var(--fonte);
+    font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
 }
